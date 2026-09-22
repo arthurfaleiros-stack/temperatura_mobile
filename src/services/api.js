@@ -1,10 +1,7 @@
 import axios from "axios";
 import { AIO_USERNAME, AIO_KEY, FEED_NAME } from "../config/adafruitConfig";
 
-// -------------------------------------------------------
-// Cria uma conexão com a API do Adafruit IO
-// Já inclui a chave e a URL base configuradas
-// -------------------------------------------------------
+
 const api = axios.create({
   baseURL: "https://io.adafruit.com/api/v2/" + AIO_USERNAME + "/feeds/",
   headers: {

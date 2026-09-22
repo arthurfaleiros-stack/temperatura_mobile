@@ -10,19 +10,17 @@ import {
 } from "react-native";
 import { postTemperatura } from "../services/api";
 
-// UpdateTemp recebe o setTela do App.js para poder voltar para a Home
+
 export default function UpdateTemp({ setTela }) {
 
-  // Guarda o texto digitado pelo usuário no campo
+
   const [valorDigitado, setValorDigitado] = useState("");
 
   // Controla se a requisição está em andamento (true = enviando)
   const [enviando, setEnviando] = useState(false);
 
-  // Guarda mensagem de erro para exibir na tela caso a API falhe
   const [mensagemErro, setMensagemErro] = useState(null);
 
-  // Função chamada ao clicar no botão "Enviar"
   async function handleEnviar() {
 
     // Converte vírgula para ponto e transforma em número decimal
